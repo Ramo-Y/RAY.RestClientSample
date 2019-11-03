@@ -1,21 +1,23 @@
 ﻿namespace RAY.RestClientSample.Views
 {
+    using System.Collections.ObjectModel;
+
     public partial class MainViewModel
     {
-        private string _postText;
+        private string _requestUri;
 
-        private string _responseText;
+        private ObservableCollection<string> _responseItems;
 
-        public string ResponseText
+        public ObservableCollection<string> ResponseItems
         {
-            get => _responseText;
-            set => SetProperty(ref _responseText, value);
+            get => _responseItems;
+            set => SetProperty(ref _responseItems, value);
         }
 
-        public string PostText
+        public string RequestUri
         {
-            get => _postText;
-            set => SetProperty(ref _postText, value);
+            get => _requestUri;
+            set => SetProperty(ref _requestUri, value);
         }
     }
 }

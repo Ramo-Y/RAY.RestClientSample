@@ -8,6 +8,8 @@
 
         private void OnCmdRestPost()
         {
+            var requestValue = _restClient.MakeRequest(RequestUri);
+            ResponseItems.Add(requestValue);
         }
     }
 }
